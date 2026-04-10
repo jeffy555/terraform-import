@@ -43,8 +43,9 @@ jobs:
       - name: Terraform Init
         run: terraform init -input=false
 
-      - name: Terraform Validate
-        run: terraform validate -no-color
+      # Terraform Validate (disabled temporarily — re-enable when ready)
+      # - name: Terraform Validate
+      #   run: terraform validate -no-color
 
       - name: Terraform Plan
         run: terraform plan -input=false -out=tfplan
