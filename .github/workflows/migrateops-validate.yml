@@ -2,11 +2,12 @@ name: MigrateOps Validate Migration
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
     paths:
       - '**.tf'
       - '**.tfvars'
       - 'imports.tf'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
